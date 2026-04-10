@@ -10,7 +10,7 @@ export default function TabLayout() {
         tabBarStyle: { borderTopWidth: 1, borderColor: '#e4e4e7', elevation: 0 }
       }}>
       <Tabs.Screen
-        name="converter"
+        name="index"
         options={{
           title: 'Converter',
           tabBarIcon: ({ color }) => <Ionicons name="swap-horizontal" size={24} color={color} />,
