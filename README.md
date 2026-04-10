@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# 🛠️ Smart Utility Toolkit
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A sleek, multi-functional utility app built with React Native and Expo Router. This project serves as a foundational demonstration of clean mobile architecture, state management, and modern UI/UX design.
 
-## Get started
+## 🚀 Features
 
-1. Install dependencies
+This app bundles three essential everyday tools into a single, seamless experience:
 
-   ```bash
-   npm install
-   ```
+1. **Multi-Converter**
+   - Seamlessly converts **Length** (Meters, Feet, etc.), **Temperature** (Celsius, Fahrenheit, Kelvin), and **Currency** (USD, EUR, GBP, etc.).
+   - Features dynamic UI updates and a sleek category selector.
+2. **BMI Calculator**
+   - Calculates Body Mass Index based on user weight and height.
+   - Provides visual feedback with dynamic color-coded categories (Underweight, Normal, Overweight, Obese).
+3. **Password Generator**
+   - Generates highly secure, customizable passwords.
+   - Granular controls for length, uppercase, lowercase, numbers, and symbols.
+   - Integrated with the native clipboard for 1-tap copying.
 
-2. Start the app
+## 🏗️ Architecture & Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **Framework:** React Native & Expo
+- **Navigation:** Expo Router (File-based routing with Bottom Tabs)
+- **Language:** TypeScript
+- **Dependencies:** - `@react-native-picker/picker` (Native dropdowns)
+  - `expo-clipboard` (Native clipboard access)
 
-In the output, you'll find options to open the app in a
+## 📁 Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The codebase strictly separates UI components from business logic to ensure scalability and testability.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```text
+smart-utility-toolkit/
+├── app/                  
+│   ├── (tabs)/           # Bottom tab navigation screens
+│   │   ├── _layout.tsx   # Tab configuration
+│   │   ├── converter.tsx # Multi-Converter UI
+│   │   ├── bmi.tsx       # BMI Calculator UI
+│   │   └── password.tsx  # Password Generator UI
+│   └── _layout.tsx       # Root stack layout
+│   └── +not-found.tsx    # Not Found page
+├── utils/                # Decoupled business logic
+│   ├── bmiLogic.ts       
+│   ├── conversionLogic.ts
+│   └── passwordLogic.ts
+├── app.json              # Expo configuration
+└── package.json
