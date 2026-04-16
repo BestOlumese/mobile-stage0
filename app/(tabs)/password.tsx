@@ -57,22 +57,22 @@ export default function PasswordScreen() {
 
         <View style={styles.settingRow}>
           <Text style={styles.label}>Uppercase (A-Z)</Text>
-          <Switch value={useUpper} onValueChange={setUseUpper} trackColor={{ true: '#8b5cf6' }} />
+          <Switch value={useUpper} onValueChange={setUseUpper} trackColor={{ true: '#F43F5E', false: '#334155' }} thumbColor="#FFFFFF" />
         </View>
 
         <View style={styles.settingRow}>
           <Text style={styles.label}>Lowercase (a-z)</Text>
-          <Switch value={useLower} onValueChange={setUseLower} trackColor={{ true: '#8b5cf6' }} />
+          <Switch value={useLower} onValueChange={setUseLower} trackColor={{ true: '#F43F5E', false: '#334155' }} thumbColor="#FFFFFF" />
         </View>
 
         <View style={styles.settingRow}>
           <Text style={styles.label}>Numbers (0-9)</Text>
-          <Switch value={useNumbers} onValueChange={setUseNumbers} trackColor={{ true: '#8b5cf6' }} />
+          <Switch value={useNumbers} onValueChange={setUseNumbers} trackColor={{ true: '#F43F5E', false: '#334155' }} thumbColor="#FFFFFF" />
         </View>
 
         <View style={styles.settingRow}>
           <Text style={styles.label}>Symbols (!@#)</Text>
-          <Switch value={useSymbols} onValueChange={setUseSymbols} trackColor={{ true: '#8b5cf6' }} />
+          <Switch value={useSymbols} onValueChange={setUseSymbols} trackColor={{ true: '#F43F5E', false: '#334155' }} thumbColor="#FFFFFF" />
         </View>
 
         <TouchableOpacity style={styles.button} onPress={handleGenerate}>
@@ -84,17 +84,17 @@ export default function PasswordScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: '#f4f4f5' },
-  title: { fontSize: 28, fontWeight: '700', color: '#18181b', marginBottom: 20 },
-  card: { backgroundColor: '#fff', padding: 20, borderRadius: 16, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.05, shadowRadius: 8, elevation: 2 },
-  outputContainer: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#fafafa', borderWidth: 1, borderColor: '#e4e4e7', borderRadius: 12, paddingLeft: 16, marginBottom: 24 },
-  passwordOutput: { flex: 1, fontSize: 18, fontFamily: 'monospace', color: '#18181b' },
-  copyButton: { backgroundColor: '#3f3f46', paddingHorizontal: 16, paddingVertical: 16, borderTopRightRadius: 12, borderBottomRightRadius: 12 },
-  copyButtonActive: { backgroundColor: '#10b981' },
-  copyButtonText: { color: '#fff', fontWeight: '600', fontSize: 14 },
-  settingRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: '#f4f4f5' },
-  label: { fontSize: 16, color: '#3f3f46', fontWeight: '500' },
-  lengthInput: { borderWidth: 1, borderColor: '#e4e4e7', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 6, fontSize: 16, width: 60, textAlign: 'center', backgroundColor: '#fafafa' },
-  button: { backgroundColor: '#8b5cf6', padding: 16, borderRadius: 12, alignItems: 'center', marginTop: 24 },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
+  container: { flex: 1, padding: 20, backgroundColor: '#0F172A' },
+  title: { fontSize: 28, fontWeight: '700', color: '#F8FAFC', marginBottom: 20 },
+  card: { backgroundColor: '#1E293B', padding: 20, borderRadius: 16, borderWidth: 1, borderColor: '#334155', shadowColor: '#000', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 10, elevation: 4 },
+  outputContainer: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#0B1120', borderWidth: 1, borderColor: '#334155', borderRadius: 12, paddingLeft: 16, marginBottom: 24, overflow: 'hidden' },
+  passwordOutput: { flex: 1, fontSize: 18, fontFamily: 'monospace', color: '#F8FAFC' },
+  copyButton: { backgroundColor: '#334155', paddingHorizontal: 16, paddingVertical: 16 },
+  copyButtonActive: { backgroundColor: '#10B981' },
+  copyButtonText: { color: '#FFFFFF', fontWeight: '600', fontSize: 14 },
+  settingRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: '#334155' },
+  label: { fontSize: 16, color: '#F8FAFC', fontWeight: '500' },
+  lengthInput: { borderWidth: 1, borderColor: '#334155', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 8, fontSize: 16, width: 60, textAlign: 'center', backgroundColor: '#0B1120', color: '#F8FAFC' },
+  button: { backgroundColor: '#F43F5E', padding: 16, borderRadius: 12, alignItems: 'center', marginTop: 24, shadowColor: '#F43F5E', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.4, shadowRadius: 8, elevation: 3 },
+  buttonText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700', letterSpacing: 0.5 },
 });
